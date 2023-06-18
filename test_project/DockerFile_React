@@ -1,0 +1,7 @@
+FROM node:16-alpine
+RUN npm install -g react-scripts
+RUN npm install -g serve
+WORKDIR /app
+COPY front/package.json /app/
+EXPOSE 5000
+RUN yarn
